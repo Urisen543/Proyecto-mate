@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grupo 3-B Programación</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #0f172a;
+
+    background: linear-gradient(270deg, #74b9ff, #fe9bc9, #81ecec, #55efc4);
+    background-size: 800% 800%;
+    animation: animarFondo 10s ease infinite;
+}
+
+@keyframes animarFondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+section{
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    font-size: 2rem;
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+p{
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #334155;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.card span{
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* 📱 AJUSTES PARA CELULARES */
+@media (max-width: 600px){
+
+    body{
+        padding: 20px 10px;
+    }
+
+    h2{
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    p{
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr; /* UNA tarjeta por fila */
+        gap: 15px;
+    }
+
+    .card{
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h2>
+    Somos el grupo 3-B de Programación<br>
+    Turno Vespertino
+</h2>
+
+<p>Y esta es nuestra página web</p>
+
+<div class="grid">
+
+<div class="card">
+<span>Alejo Córdoba Axel Génesis</span>
+<span>Álvaro Fermín Kevin Adolfo</span>
+<span>Ávalos Lares Yennifer Monserrat</span>
+<span>Fabián Rolon Yuliana del Rocío</span>
+<span>García Ruiz Sandra Michelle</span>
+<span>Gutiérrez Juárez Gabriel René</span>
+<span>Guzman Cibrián Naomi Karina</span>
+<span>Jiménez Flores José Manuel</span>
+</div>
+
+<div class="card">
+<span>Leal Murguía Karla Yazmín</span>
+<span>Leonardo Guzmán Joshua Alejandro</span>
+<span>Morán Sánchez Uriel</span>
+<span>Naranjo Flores Octavio Emiliano</span>
+<span>Nazario Hernández Yelmi Gisell</span>
+<span>Oseguera Carrero Raamses Alejandro</span>
+<span>Panduro López Samuel Obed</span>
+<span>Pérez Hernández Luna Sofia</span>
+</div>
+
+<div class="card">
+<span>Ramírez Álvarez Juan Pablo</span>
+<span>Reyes Fernández Omar</span>
+<span>Rodríguez Cervantes Naomi</span>
+<span>Salazar Anguiano Logan Alexander</span>
+<span>Solorio Vargas Mildred Jocelyn</span>
+<span>Terrones Tadeo Luis Arturo</span>
+<span>Torres Castro Victoria Esmeralda</span>
+<span>Vega Hernández José Manuel</span>
+</div>
+
+<div class="card">
+<span>Velasco González Jonathan Alberto</span>
+<span>Luis Juan Becerra Josué</span>
+<span>Galván Parra Adrián Oswaldo</span>
+<span>García Hernández David</span>
+</div>
+
+</div>
+</section>
+
+</body>
+</html>

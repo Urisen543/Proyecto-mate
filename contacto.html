@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #eef2ff);
+    padding: 20px;
+
+     background: linear-gradient(270deg, #74b9ff, #fe9bc9, #81ecec, #55efc4);
+        background-size: 800% 800%;
+        animation: animarFondo 10s ease infinite;
+}
+ @keyframes animarFondo {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+.form-container{
+    max-width: 450px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: fadeIn .6s ease;
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; transform: scale(0.95); }
+    to{ opacity:1; transform: scale(1); }
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1d4ed8;
+}
+
+/* Campos */
+input, textarea, select{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid #c7d2fe;
+    outline: none;
+    font-size: 1em;
+    transition: .25s;
+}
+
+input:focus, textarea:focus, select:focus{
+    border-color: #1d4ed8;
+}
+
+/* Botón */
+button{
+    width: 100%;
+    padding: 12px;
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover{
+    background: #2563eb;
+    transform: scale(1.02);
+}
+/* ------------------------- */
+/*     ESTILOS PARA CELULAR */
+/* ------------------------- */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p, li {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    /* Ajuste del menú */
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 14px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .submenu a {
+        padding-left: 30px;
+    }
+
+    /* Ajuste del contenedor GeoGebra */
+    .geogebra-container iframe {
+        height: 350px;
+    }
+
+    /* Footer más compacto */
+    footer {
+        padding: 20px;
+    }
+
+    footer h2 {
+        font-size: 20px !important;
+    }
+
+    footer a {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 20px !important;
+    }
+}
+
+/* Para pantallas muy pequeñas (teléfonos chicos) */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    p, li {
+        font-size: 0.95em;
+    }
+
+    .geogebra-container iframe {
+        height: 300px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+    <h2>Formulario de Contacto</h2>
+
+    <form>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Escribe tu nombre" required>
+
+        <label>Correo:</label>
+        <input type="email" placeholder="Escribe tu correo" required>
+
+        <label>Motivo:</label>
+        <select required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option>Comentario</option>
+            <option>Duda</option>
+            <option>Reporte</option>
+        </select>
+
+        <label>Mensaje:</label>
+        <textarea rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+</body>
+</html>

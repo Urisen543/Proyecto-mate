@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(270deg, #74b9ff, #fe9bc9, #81ecec, #55efc4);
+            background-size: 800% 800%;
+            animation: animarFondo 10s ease infinite;
+        }
+
+        @keyframes animarFondo {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h2 {
+            font-size: 50px;                 
+            color: #ffffff;
+            text-shadow: 3px 3px 6px #00000055;
+            background: rgba(0,0,0,0.25);    
+            padding: 20px 40px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 60px;
+        }
+
+        .botones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+            gap: 20px;
+            max-width: 600px;   
+            margin: auto;       
+            margin-top: 40px;
+        }
+
+        button {
+            height: 160px;          
+            font-size: 16px;        
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;    
+            cursor: pointer;
+
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px;
+            transition: 0.25s;
+        }
+
+        button:hover {
+            transform: scale(1.1);      
+            filter: brightness(1.1);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <h2>Gráficas de Funciones Matemáticas</h2>
+
+    <div class="botones">
+
+        <button style="background-image: url('linea.png'); background-color:#f2868dcc;"
+                onclick="verInfo('lineal')">Lineal y = 2x + 1</button>
+
+        <button style="background-image: url('cuadratica.png'); background-color:#457b9dcc;"
+                onclick="verInfo('cuadratica')">Cuadrática ax²+bx+c</button>
+
+        <button style="background-image: url('cubica.png'); background-color:#2a9d8fcc;"
+                onclick="verInfo('cubica')">Cúbica ax³+bx²+cx+d</button>
+
+        <button style="background-image: url('seno.png'); background-color:#ffb703cc;"
+                onclick="verInfo('seno')">Seno y = sin(x)</button>
+
+        <button style="background-image: url('coseno.png'); background-color:#8e44adcc;"
+                onclick="verInfo('coseno')">Coseno y = cos(x)</button>
+
+        <button style="background-image: url('tangente.png'); background-color:#90b0f0cc;"
+                onclick="verInfo('tangente')">Tangente y = tan(x)</button>
+
+        <button style="background-image: url('exponencial.png'); background-color:#bded8dcc;"
+                onclick="verInfo('exponencial')">Exponencial y = e^(x/2)</button>
+
+        <button style="background-image: url('logaritmica.png'); background-color:#8635f850;"
+                onclick="verInfo('logaritmica')">Logarítmica y = log(x)</button>
+
+        <button style="background-image: url('racional.png'); background-color:#7ed7f5cc;"
+                onclick="verInfo('racional')">Racional y = 1/x</button>
+
+    </div>
+
+    <script>
+        function verInfo(pagina) {
+            window.location.href = pagina + ".html";
+        }
+    </script>
+   <footer style="
+    margin-top: 60px;
+    padding: 30px;
+    background: rgba(0,0,0,0.35);
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    font-family: Arial, sans-serif;
+">
+
+    <h2 style="margin:0 0 15px 0; font-size: 26px;">Síguenos en nuestras redes</h2>
+
+    <div style="
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    ">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com" target="_blank"
+           style="background:#3b5998; color:white; font-size:24px;
+                  width:45px; height:45px; display:flex;
+                  justify-content:center; align-items:center;
+                  border-radius:50%; text-decoration:none;">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com" target="_blank"
+           style="background:#d6249f; color:white; font-size:24px;
+                  width:45px; height:45px; display:flex;
+                  justify-content:center; align-items:center;
+                  border-radius:50%; text-decoration:none;">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com" target="_blank"
+           style="background:#ff0000; color:white; font-size:24px;
+                  width:45px; height:45px; display:flex;
+                  justify-content:center; align-items:center;
+                  border-radius:50%; text-decoration:none;">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a href="https://www.twitter.com" target="_blank"
+           style="background:#000; color:white; font-size:24px;
+                  width:45px; height:45px; display:flex;
+                  justify-content:center; align-items:center;
+                  border-radius:50%; text-decoration:none;">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+    </div>
+
+    <p style="margin: 10px 0 0; font-size: 16px;">
+        © 2025 • Todos los derechos reservados • Proyecto de Funciones Matemáticas
+    </p>
+
+</footer>
+</body>
+</html>
+
+</body>
+</html>
